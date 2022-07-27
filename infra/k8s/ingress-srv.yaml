@@ -22,9 +22,4 @@ spec:
               service:
                 name: client-srv
                 port: 3000
-#https://hooks.slack.com/services/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
 
-#gcloud run deploy slacker \
-#--image=us-east1-docker.pkg.dev/gcb-release/cloud-build-notifiers/slack:latest \
-#--no-allow-unauthenticated \
-#--update-env-vars=CONFIG_PATH=gs://smtp-notifier-bucket/slack-config.yaml,PROJECT_ID=app-mod-gebu-trainees
