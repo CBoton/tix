@@ -8,13 +8,21 @@ build:
   #local:
   # push: false
   googleCloudBuild:
-    projectId: microservice-342319
+    projectId: app-mod-gebu-trainees
   artifacts:
-    - image: us.gcr.io/microservice-342319/auth
+    - image: us.gcr.io/app-mod-gebu-trainees/auth
       context: auth
       docker:
         dockerfile: Dockerfile
       sync:
         manual:
           - src: 'src/**/*.ts'
+            dest: .
+    - image: us.gcr.io/app-mod-gebu-trainees/tix-client
+      context: client
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.ts'
             dest: .
